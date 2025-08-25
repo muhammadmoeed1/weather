@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Loading weather data...</p>
+    </div>
+
+    <div class="error-message" id="errorMessage"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                <h1>Weather Dashboard</h1>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="citySearch" placeholder="Search for a city...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <button class="btn btn-primary" id="currentLocationBtn">
+                    <i class="fas fa-location-arrow"></i>
+                    <span>My Location</span>
+                </button>
+            </div>
+            
+            <div class="controls">
+                <button class="btn" id="refreshBtn">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Refresh</span>
+                </button>
+                
+                <div class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <div class="theme-toggle-ball"></div>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section class="current-weather" id="currentWeather">
+                <div class="city-name">
+                    <h2 id="cityName">New York</h2>
+                    <span class="country-flag" id="countryFlag">🇺🇸</span>
+                </div>
+                
+                <p class="current-time" id="currentTime">Monday, 10:30 AM</p>
+                
+                <div class="weather-main">
+                    <div class="temperature" id="temperature">24°C</div>
+                    
+                    <div class="weather-condition">
+                        <div class="weather-icon" id="weatherIcon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <p class="weather-description" id="weatherDescription">Sunny</p>
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <i class="fas fa-temperature-high"></i>
+                        <p>Feels Like</p>
+                        <p id="feelsLike">26°C</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <i class="fas fa-tint"></i>
+                        <p>Humidity</p>
+                        <p id="humidity">65%</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <i class="fas fa-wind"></i>
+                        <p>Wind Speed</p>
+                        <p id="windSpeed">5.5 km/h</p>
+                    </div>
+                </div>
+                
+                <button class="btn" id="addToFavoritesBtn" style="margin-top: 20px;">
+                    <i class="fas fa-heart"></i>
+                    <span>Add to Favorites</span>
+                </button>
+            </section>
+            
+            <section class="forecast">
+                <h3 class="section-title"><i class="fas fa-calendar-alt"></i> 3-Day Forecast</h3>
+                
+                <div class="forecast-cards" id="forecastCards">
+                    <div class="forecast-card">
+                        <p class="forecast-day">Tuesday</p>
+                        <div class="forecast-icon"><i class="fas fa-sun"></i></div>
+                        <p class="forecast-temp">26°C</p>
+                    </div>
+                    
+                    <div class="forecast-card">
+                        <p class="forecast-day">Wednesday</p>
+                        <div class="forecast-icon"><i class="fas fa-cloud-sun"></i></div>
+                        <p class="forecast-temp">24°C</p>
+                    </div>
+                    
+                    <div class="forecast-card">
+                        <p class="forecast-day">Thursday</p>
+                        <div class="forecast-icon"><i class="fas fa-cloud-rain"></i></div>
+                        <p class="forecast-temp">21°C</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="favorites">
+                <h3 class="section-title"><i class="fas fa-heart"></i> Favorite Cities</h3>
+                
+                <div class="favorites-cities" id="favoriteCities">
+                    <!-- Favorite cities will be added here dynamically -->
+                </div>
+            </section>
+            
+            <section class="recent-searches">
+                <h3 class="section-title"><i class="fas fa-history"></i> Recent Searches</h3>
+                
+                <div class="recent-searches-list" id="recentSearches">
+                    <!-- Recent searches will be added here dynamically -->
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Created with ❤️ by Moeed</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
