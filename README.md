@@ -1,21 +1,15 @@
 Weather Dashboard 🌤️
+
 A modern, responsive weather dashboard built with vanilla JavaScript that provides real-time weather information and forecasts for cities worldwide.
 
 ✨ Features
 Real-time Weather Data: Get current weather conditions for any city worldwide
-
 3-Day Forecast: View detailed weather forecasts for the next three days
-
 Location Services: Automatically detect your location for instant weather updates
-
 Favorite Cities: Save and quickly access your favorite locations
-
 Search History: Keep track of recently searched cities
-
 Dark/Light Theme: Toggle between light and dark modes with smooth transitions
-
 Responsive Design: Works perfectly on desktop, tablet, and mobile devices
-
 Weather-Adaptive Backgrounds: Background changes based on current weather conditions
 
 🛠️ Technologies Used
