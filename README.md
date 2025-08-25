@@ -1,4 +1,4 @@
-###Weather Dashboard 🌤️
+Weather Dashboard 🌤️
 
 A modern, responsive weather dashboard built with vanilla JavaScript that provides real-time weather information and forecasts for cities worldwide.
 
